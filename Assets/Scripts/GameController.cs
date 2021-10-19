@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         IntroductionControllerScreen();
+        WaitinScreenController();
     }
 
     public void IntroductionControllerScreen()
@@ -28,12 +29,13 @@ public class GameController : MonoBehaviour
         {
             introductionScreen.SetActive(false);
             waitingScreen.SetActive(true);
- 
         }
+        
+        
     }
     public void WaitinScreenController()
     {
-        if (Input.anyKey)
+        if (Input.GetKey(KeyCode.S))
         {
             waitingScreen.SetActive(false);
             menuScreen.SetActive(true);
