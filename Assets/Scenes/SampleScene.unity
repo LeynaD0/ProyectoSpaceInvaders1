@@ -708,7 +708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &424560743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6469,7 +6469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &800369904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7645,7 +7645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press any key
+  m_text: Press intro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd93d2679b03e1d488dab7e3c57a44b4, type: 2}
   m_sharedMaterial: {fileID: -1394712087445633827, guid: fd93d2679b03e1d488dab7e3c57a44b4, type: 2}
@@ -9072,6 +9072,8 @@ MonoBehaviour:
   introductionScreen: {fileID: 1805412142}
   waitingScreen: {fileID: 424560742}
   menuScreen: {fileID: 800369903}
+  timeIntroScreen: 0
+  stopTimeIntro: 0
 --- !u!4 &2126692430
 Transform:
   m_ObjectHideFlags: 0

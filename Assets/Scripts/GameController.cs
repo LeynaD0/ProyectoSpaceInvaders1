@@ -5,12 +5,12 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject introductionScreen;
-    public GameObject waitingScreen;
-    public GameObject menuScreen;
+    public GameObject introductionScreen; //Un GameObject para asignar una función a la introducción. 
+    public GameObject waitingScreen;  //Un GameObject para asignar una función a la pantalla de espera.
+    public GameObject menuScreen;  //Un GameObject para asignar una función a la pantalla del menú.
+    public float timeIntroScreen = 0.0f;  //Un float para poner un tiempo para la introducción. 
+    public bool stopTimeIntro = false;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -30,16 +30,27 @@ public class GameController : MonoBehaviour
             introductionScreen.SetActive(false);
             waitingScreen.SetActive(true);
         }
-        
+        if (stopTimeIntro == false)
+        {
+            timeIntroScreen += Time.deltaTime;
+        }
+        if (timeIntroScreen >= 106)
+        {
+            stopTimeIntro = true;
+            introductionScreen.SetActive(false);
+            waitingScreen.SetActive(true);
+            timeIntroScreen = 0f;
+        }
         
     }
     public void WaitinScreenController()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.Return))
         {
             waitingScreen.SetActive(false);
             menuScreen.SetActive(true);
         }
+        
     }
 
     
