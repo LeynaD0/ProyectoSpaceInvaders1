@@ -6,6 +6,7 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public GameObject introductionScreen;
+    public GameObject waitingScreen;
     public GameObject menuScreen;
     
 
@@ -18,21 +19,27 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        IntroductionControllerScreen();
+        WaitinScreenController();
     }
 
     public void IntroductionControllerScreen()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             introductionScreen.SetActive(false);
- 
+            waitingScreen.SetActive(true);
         }
-        else
+        
+        
+    }
+    public void WaitinScreenController()
+    {
+        if (Input.GetKey(KeyCode.S))
         {
+            waitingScreen.SetActive(false);
             menuScreen.SetActive(true);
         }
-
     }
 
     

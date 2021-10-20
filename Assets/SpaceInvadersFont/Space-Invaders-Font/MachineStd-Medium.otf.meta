@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a35f27ac650067a429cc3b830d6bc706
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ITC Machine Std
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a3121412fbf0afd4ebc710b60bab0d22, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
