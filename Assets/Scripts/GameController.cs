@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public GameObject menuScreen;  //Un GameObject para asignar una función a la pantalla del menú.
     public float timeIntroScreen = 0.0f;  //Un float para poner un tiempo para la introducción. 
     public bool stopTimeIntro = false;
+    public GameObject optionsMenuScreen;
     
     void Start()
     {
@@ -53,5 +54,10 @@ public class GameController : MonoBehaviour
         
     }
 
+    public void OptionsMenuScreen()
+    {   
+            menuScreen.SetActive(false);
+            optionsMenuScreen.SetActive(true);
+    }
     
 }
