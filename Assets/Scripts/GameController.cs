@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     public float timeIntroScreen = 0.0f;  //Un float para poner un tiempo para la introducción. 
     public bool stopTimeIntro = false;
     public GameObject optionsMenuScreen;
+    public AudioSource menuEffects;
+    
+    
     
     void Start()
     {
@@ -22,6 +25,7 @@ public class GameController : MonoBehaviour
     {
         IntroductionControllerScreen();
         WaitinScreenController();
+        
     }
 
     public void IntroductionControllerScreen()
@@ -56,8 +60,19 @@ public class GameController : MonoBehaviour
 
     public void OptionsMenuScreen()
     {   
-            menuScreen.SetActive(false);
-            optionsMenuScreen.SetActive(true);
+        menuScreen.SetActive(false);
+        optionsMenuScreen.SetActive(true);       
     }
-    
+
+    public void CancelOptionsMenu()
+    {
+        optionsMenuScreen.SetActive(false);
+        menuScreen.SetActive(true);
+    }
+
+    public void AcceptOptionsMenu()
+    {
+        optionsMenuScreen.SetActive(false);
+        menuScreen.SetActive(true);
+    }
 }
