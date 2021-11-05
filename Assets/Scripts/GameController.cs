@@ -40,13 +40,14 @@ public class GameController : MonoBehaviour
         {
             introductionScreen.SetActive(false);
             waitingScreen.SetActive(true);
-            timeIntroScreen = 0f;
+            timeIntroScreen = 109f;
+            
         }
         if (stopTimeIntro == false)
         {
             timeIntroScreen += Time.deltaTime;
         }
-        if (timeIntroScreen >= 106)
+        if (timeIntroScreen >= 106 && timeIntroScreen < 108)
         {
             stopTimeIntro = true;
             introductionScreen.SetActive(false);
@@ -57,7 +58,7 @@ public class GameController : MonoBehaviour
     }
     public void WaitinScreenController()
     {
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKey(KeyCode.P))
         {
             waitingScreen.SetActive(false);
             menuScreen.SetActive(true);
