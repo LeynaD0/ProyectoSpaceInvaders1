@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Idiomas Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Idiomas
+  m_TableCollectionNameGuidString: ffbc40a97f93fcb4ea78260cc8049c56
+  m_Entries:
+  - m_Id: 21451927552
+    m_Key: Historia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4353207463936
+    m_Key: GalaxiaLejana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4838085783552
+    m_Key: StartMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5335597346816
+    m_Key: OptionsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5595686137856
+    m_Key: RecordsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6107781296128
+    m_Key: TitleOptions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6367542931456
+    m_Key: EffectsOptionsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6369208070144
+    m_Key: MusicOptionsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6721982590976
+    m_Key: LenguageOptionsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7354026455040
+    m_Key: Lenguage
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1636713733821

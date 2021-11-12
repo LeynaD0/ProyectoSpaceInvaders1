@@ -5,6 +5,8 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController menuControll;
+
     public GameObject introductionScreen; //Un GameObject para asignar una función a la introducción. 
 
     public GameObject waitingScreen;  //Un GameObject para asignar una función a la pantalla de espera.

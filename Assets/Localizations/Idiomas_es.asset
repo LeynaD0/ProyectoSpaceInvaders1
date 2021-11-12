@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Idiomas_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: ffbc40a97f93fcb4ea78260cc8049c56, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 21451927552
+    m_Localized: "La venganza del izq\n\nGuerra. El pa\xEDs se derrumba\r\nbajo los
+      ataques del despiadado\r\nSe\xF1or izq, el Conde Iglesias.\r\nHay h\xE9roes
+      en ambos bandos.\r\nEl mal est\xE1 en todas partes.\r\nEn una sorprendente
+      maniobra, el\r\nmalvado l\xEDder de los marroides, el General\r\nGriveras,
+      ha entrado en la\r\nCapital de la Rep\xFAblica y secuestrado\r\nal Canciller
+      Pedrotine, el l\xEDder\r\ndel Senado Gal\xE1ctico.\r\n\r\nMientras el Ej\xE9rcito
+      Separroquista Marroide\nintenta huir de la capital\r\nsitiada con su valioso\r\nrehen,
+      dos Caballeros Dechi dirigen una\r\nmisi\xF3n desesperada para rescatar al\r\nCanciller
+      cautivo\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4353207463936
+    m_Localized: Hace mucho tiempo, en una frontera muy, muy lejana...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4838085783552
+    m_Localized: Empezar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5335597346816
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5595686137856
+    m_Localized: Records
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6107781296128
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6367542931456
+    m_Localized: Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6369208070144
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6721982590976
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7354026455040
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

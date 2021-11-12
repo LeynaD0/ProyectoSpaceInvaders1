@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Idiomas_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: ffbc40a97f93fcb4ea78260cc8049c56, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 21451927552
+    m_Localized: 'The revenge of the left
+
+      
+
+      War. The country collapses
+
+      under
+      the attacks of the ruthless
+
+      Mr left, Count Iglesias.
+
+      There
+      are heroes on both sides.
+
+      Evil is everywhere.
+
+      In a surprising
+      maneuver, the
+
+      evil leader of the marroids, the General
+
+      Griveras,
+      has entered the
+
+      Capital of the Republic and kidnapped
+
+      Chancellor
+      Pedrotine, the leader
+
+      of the Galactic Senate.
+
+      
+
+      While
+      the Moroccan Separroist Army
+
+      try to flee the capital
+
+      besieged
+      with its valuable
+
+      hostage, two Dechi Knights lead a
+
+      desperate
+      mission to rescue the
+
+      Captive Chancellor ...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4353207463936
+    m_Localized: A long time ago, on a very, very distant frontier ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4838085783552
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5335597346816
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5595686137856
+    m_Localized: Records
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6107781296128
+    m_Localized: options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6367542931456
+    m_Localized: Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6369208070144
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6721982590976
+    m_Localized: Lenguage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7354026455040
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
