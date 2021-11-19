@@ -21,7 +21,7 @@ MonoBehaviour:
   - m_Id: 21451927552
     m_Localized: 'The revenge of the left
 
-      
+
 
       War. The country collapses
 
@@ -30,42 +30,42 @@ MonoBehaviour:
 
       Mr left, Count Iglesias.
 
-      There
-      are heroes on both sides.
+      There are
+      heroes on both sides.
 
       Evil is everywhere.
 
-      In a surprising
-      maneuver, the
+      In a surprising maneuver,
+      the
 
       evil leader of the marroids, the General
 
-      Griveras,
-      has entered the
+      Griveras, has entered
+      the
 
       Capital of the Republic and kidnapped
 
-      Chancellor
-      Pedrotine, the leader
+      Chancellor Pedrotine,
+      the leader
 
       of the Galactic Senate.
 
-      
 
-      While
-      the Moroccan Separroist Army
+
+      While the Moroccan Separroist
+      Army
 
       try to flee the capital
 
-      besieged
-      with its valuable
+      besieged with its valuable
 
-      hostage, two Dechi Knights lead a
+      hostage,
+      two Dechi Knights lead a
 
-      desperate
-      mission to rescue the
+      desperate mission to rescue the
 
-      Captive Chancellor ...'
+      Captive
+      Chancellor ...'
     m_Metadata:
       m_Items: []
   - m_Id: 4353207463936
@@ -102,6 +102,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7354026455040
     m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2532551789645824
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2532679225184256
+    m_Localized: Accept
     m_Metadata:
       m_Items: []
   references:

@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
     public GameObject optionsMenuScreen;
 
     public AudioSource menuEffects;
-    
-    
+
+    bool touchEnded = false;
     
     void Start()
     {
@@ -31,14 +31,33 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IntroductionControllerScreen();
-        WaitinScreenController();
+        
+        if (introductionScreen.activeSelf == true)
+        {
+            IntroductionControllerScreen();
+        }else if (waitingScreen.activeSelf == true)
+        {
+            WaitinScreenController();
+        }
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended)
+            {
+                touchEnded = true;
+            }
+        }
+        else
+        {
+            touchEnded = false;
+        }
         
     }
 
     public void IntroductionControllerScreen()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             introductionScreen.SetActive(false);
             waitingScreen.SetActive(true);
@@ -60,11 +79,13 @@ public class GameController : MonoBehaviour
     }
     public void WaitinScreenController()
     {
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.touchCount > 0)
         {
             waitingScreen.SetActive(false);
             menuScreen.SetActive(true);
+            
         }
+
         
     }
 

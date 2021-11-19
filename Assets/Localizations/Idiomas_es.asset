@@ -63,7 +63,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7354026455040
-    m_Localized: "Espa\xF1ol"
+    m_Localized: Espanol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2532551789645824
+    m_Localized: Cancelar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2532679225184256
+    m_Localized: Aceptar
     m_Metadata:
       m_Items: []
   references:
