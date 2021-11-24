@@ -114,4 +114,10 @@ public class GameController : MonoBehaviour
         menuScreen.SetActive(false);
         playModeScreen.SetActive(true);
     }
+
+    public void BackButtonScreen()
+    {
+        playModeScreen.SetActive(false);
+        menuScreen.SetActive(true);
+    }
 }

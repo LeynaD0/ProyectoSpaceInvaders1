@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6107781296128
-    m_Localized: Opciones
+    m_Localized: opciones
     m_Metadata:
       m_Items: []
   - m_Id: 6367542931456
@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6721982590976
-    m_Localized: Idioma
+    m_Localized: idioma
     m_Metadata:
       m_Items: []
   - m_Id: 7354026455040
