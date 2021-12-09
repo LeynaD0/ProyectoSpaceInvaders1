@@ -9,6 +9,11 @@ public class SpaceShipScreen : MonoBehaviour
     public Slider speedSlider;
     public Slider shieldSlider;
     public Slider heatSlider;
+
+    
+    private float speed;
+    
+    
     void Start()
     {
         Debug.Log(infoSpaceShip.speed);
@@ -27,9 +32,12 @@ public class SpaceShipScreen : MonoBehaviour
 
        if(shieldSlider.value < infoSpaceShip.shield)
         {
-            shieldSlider.value += Time.deltaTime.shield;
+            shieldSlider.value += Time.deltaTime * speed;
         }
-        heatSlider.value = infoSpaceShip.heat;
 
+        if (heatSlider.value < infoSpaceShip.heat)
+        {
+            heatSlider.value += Time.deltaTime * speed;
+        }
     }
 }
