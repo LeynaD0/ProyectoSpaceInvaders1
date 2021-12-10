@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SpaceShipScreen : MonoBehaviour
 {
@@ -9,9 +10,13 @@ public class SpaceShipScreen : MonoBehaviour
     public Slider speedSlider;
     public Slider shieldSlider;
     public Slider heatSlider;
+    public TextMeshProUGUI nameShip;
 
+    public int index = 0;
+
+    public GameObject[] spaceShips;
     
-    private float speed;
+    private float speed = 1.0f;
     
     
     void Start()
@@ -39,5 +44,12 @@ public class SpaceShipScreen : MonoBehaviour
         {
             heatSlider.value += Time.deltaTime * speed;
         }
+    }
+
+    public void ReturnData()
+    {
+        speedSlider.value = 0.0f;
+        shieldSlider.value = 0.0f;
+        heatSlider.value = 0.0f;
     }
 }

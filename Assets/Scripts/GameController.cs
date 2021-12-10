@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
     public AudioSource menuEffects;
 
     bool touchEnded = false;
+
+    public GameObject spaceShipScreen;
     
     void Start()
     {
@@ -119,5 +121,17 @@ public class GameController : MonoBehaviour
     {
         playModeScreen.SetActive(false);
         menuScreen.SetActive(true);
+    }
+
+    public void SpaceShipScreenOn()
+    {
+        spaceShipScreen.SetActive(true);
+        playModeScreen.SetActive(false);
+    }
+
+    public void SpaceShipScreenOff()
+    {
+        spaceShipScreen.SetActive(false);
+        playModeScreen.SetActive(true);
     }
 }
