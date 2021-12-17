@@ -28,15 +28,16 @@ public class SpaceShipScreen : MonoBehaviour
 
         for (int i = 0; i < spaceShips.Length; i++)
         {
-            spaceShips[i].SetActive(true);
-
             if (i == index)
             {
-                spaceShips[i].SetActive(true);
+                spaceShips[index].GetComponent<Idle>().restart();
             }
 
             else
             {
+                spaceShips[i].GetComponent<Idle>().restart();
+
+                spaceShips[i].GetComponent<Idle>().leaveAnimation();
                 spaceShips[i].SetActive(false);
             }
 
@@ -51,34 +52,52 @@ public class SpaceShipScreen : MonoBehaviour
         {
             speedSlider.value += Time.deltaTime * speed;
         }
+        else if(speedSlider.value > infoSpaceShip[index].speed)
+        {
+            speedSlider.value -= Time.deltaTime * speed;
+        }
 
         if (shieldSlider.value < infoSpaceShip[index].shield)
         {
             shieldSlider.value += Time.deltaTime * speed;
         }
 
+        else if (speedSlider.value > infoSpaceShip[index].shield)
+        {
+            speedSlider.value -= Time.deltaTime * speed;
+        }
+
         if (heatSlider.value < infoSpaceShip[index].heat)
         {
             heatSlider.value += Time.deltaTime * speed;
+        }
+
+        else if (speedSlider.value > infoSpaceShip[index].heat)
+        {
+            speedSlider.value -= Time.deltaTime * speed;
         }
     }
 
     public void NextShip()
     {
+        spaceShips[index].GetComponent<Idle>().leaveAnimation();
+
         index++;
 
         if (index > 2)
         {
             index = 0;
         }
+        spaceShips[index].SetActive(true);
+        spaceShips[index].GetComponent<Idle>().restart();
+
         speedSlider.value = 0.0f;
         shieldSlider.value = 0.0f;
         heatSlider.value = 0.0f;
         nameShip.text = infoSpaceShip[index].spaceshipName;
-
-        for (int i = 0; i < spaceShips.Length; i++)
+       /* for (int i = 0; i < spaceShips.Length; i++)
         {
-            spaceShips[i].SetActive(true);
+            
 
             if (i == index)
             {
@@ -89,11 +108,13 @@ public class SpaceShipScreen : MonoBehaviour
             {
                 spaceShips[i].SetActive(false);
             }
-        }
+        }*/
     }
 
     public void PreviusShip()
     {
+        spaceShips[index].GetComponent<Idle>().leaveAnimation();
+
         index--;
 
         if (index > 2)
@@ -103,11 +124,15 @@ public class SpaceShipScreen : MonoBehaviour
         speedSlider.value = 0.0f;
         shieldSlider.value = 0.0f;
         heatSlider.value = 0.0f;
+        spaceShips[index].SetActive(true);
+        spaceShips[index].GetComponent<Idle>().restart();
+
+
         nameShip.text = infoSpaceShip[index].spaceshipName;
 
-        for (int i = 0; i < spaceShips.Length; i++)
+        /*for (int i = 0; i < spaceShips.Length; i++)
         {
-            spaceShips[i].SetActive(true);
+            
 
             if (i == index)
             {
@@ -118,6 +143,6 @@ public class SpaceShipScreen : MonoBehaviour
             {
                 spaceShips[i].SetActive(false);
             }
-        }
+        }*/
     }
 }
