@@ -7,27 +7,26 @@ using UnityEngine.UI;
 
 public class AudioControl: MonoBehaviour
 {
-    public static AudioControl instance;
-
     public AudioSource musicSource;
     public AudioSource effectsSource;
     public Slider sliderMusic;
     public Slider sliderEffects;
+    public float valor; 
 
     public void Start()
     {
-        instance = this;
-       
-        PlayerPrefs.SetFloat("volumenMusica", 0.5f);
-        PlayerPrefs.SetFloat("volumenEfectos", 0.5f);
-        MenuVolume();
+        sliderMusic.value = 0.5f;
+        sliderEffects.value = 0.5f;
     }
-
-    private void MenuVolume()
+    public void CancelButton()
     {
-        musicSource.volume = PlayerPrefs.GetFloat("volumenMusica");
-        effectsSource.volume = PlayerPrefs.GetFloat("volumenEfectos");
-        
+        PlayerPrefs.GetFloat("volumenMusica");
+        PlayerPrefs.GetFloat("volumenEfectos"); 
+    }
+    public void AcceptButton()
+    {
+        PlayerPrefs.SetFloat("volumenMusica", sliderMusic.value);
+        PlayerPrefs.SetFloat("volumenEfectos", sliderEffects.value);
     }
 
     public void SliderMusicModified()
