@@ -30,12 +30,12 @@ public class SpaceShipScreen : MonoBehaviour
         {
             if (i == index)
             {
-                spaceShips[index].GetComponent<Idle>().restart();
+                //spaceShips[index].GetComponent<Idle>().restart();
             }
 
             else
             {
-                spaceShips[i].GetComponent<Idle>().restart();
+               // spaceShips[i].GetComponent<Idle>().restart();
 
                 spaceShips[i].GetComponent<Idle>().leaveAnimation();
                 spaceShips[i].SetActive(false);
@@ -81,6 +81,7 @@ public class SpaceShipScreen : MonoBehaviour
     public void NextShip()
     {
         spaceShips[index].GetComponent<Idle>().leaveAnimation();
+        spaceShips[index].SetActive(false);
 
         index++;
 
@@ -89,7 +90,7 @@ public class SpaceShipScreen : MonoBehaviour
             index = 0;
         }
         spaceShips[index].SetActive(true);
-        spaceShips[index].GetComponent<Idle>().restart();
+        //spaceShips[index].GetComponent<Idle>().restart();
 
         speedSlider.value = 0.0f;
         shieldSlider.value = 0.0f;
@@ -114,35 +115,23 @@ public class SpaceShipScreen : MonoBehaviour
     public void PreviusShip()
     {
         spaceShips[index].GetComponent<Idle>().leaveAnimation();
+        spaceShips[index].SetActive(false);
 
         index--;
 
-        if (index > 2)
+        if (index < 0)
         {
-            index = 0;
+            index = 2;
         }
         speedSlider.value = 0.0f;
         shieldSlider.value = 0.0f;
         heatSlider.value = 0.0f;
         spaceShips[index].SetActive(true);
-        spaceShips[index].GetComponent<Idle>().restart();
+        //spaceShips[index].GetComponent<Idle>().restart();
 
 
         nameShip.text = infoSpaceShip[index].spaceshipName;
 
-        /*for (int i = 0; i < spaceShips.Length; i++)
-        {
-            
-
-            if (i == index)
-            {
-                spaceShips[i].SetActive(true);
-            }
-
-            else
-            {
-                spaceShips[i].SetActive(false);
-            }
-        }*/
+ 
     }
 }
