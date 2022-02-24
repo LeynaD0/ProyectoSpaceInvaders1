@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerLoader : MonoBehaviour
 {
-    private void Awake()
+    void Awake()
     {
-        GameObject nave = Instantiate(GameDataPersistant.instance.selectSpaceShip.prefab);
+        GameObject nave = Instantiate(GameDataPersistent.instance.selectSpaceShip.prefab);
         nave.transform.localScale *= 10f;
     }
 }

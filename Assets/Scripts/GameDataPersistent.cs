@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameDataPersistant : MonoBehaviour
+public class GameDataPersistent : MonoBehaviour
 {
     public SpaceShipData selectSpaceShip;
-    public static GameDataPersistant instance;
+    public static GameDataPersistent instance;
     private void Awake()
     {
-        if (GameDataPersistant.instance == null)
+        if (GameDataPersistent.instance == null)
         {
-            GameDataPersistant.instance = this;
+            GameDataPersistent.instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
