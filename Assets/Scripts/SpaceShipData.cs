@@ -16,6 +16,8 @@ public class SpaceShipData : ScriptableObject
 
     [Range(0, 3.0f)]
     public int heat = 1;
+
+    public GameObject prefab;
 }
 
     

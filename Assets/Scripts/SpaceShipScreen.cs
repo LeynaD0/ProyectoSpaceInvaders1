@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SpaceShipScreen : MonoBehaviour
 {
@@ -133,5 +134,10 @@ public class SpaceShipScreen : MonoBehaviour
         nameShip.text = infoSpaceShip[index].spaceshipName;
 
  
+    }
+
+    public void GameScene()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
