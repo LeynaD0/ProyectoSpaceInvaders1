@@ -16,3 +16,4 @@ MonoBehaviour:
   shield: 1
   speed: 3
   heat: 2
+  prefab: {fileID: 486974467155189689, guid: 7e5820b4500116742b1a42a293dd92b6, type: 3}

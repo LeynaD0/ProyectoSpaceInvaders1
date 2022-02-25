@@ -97,20 +97,22 @@ public class SpaceShipScreen : MonoBehaviour
         shieldSlider.value = 0.0f;
         heatSlider.value = 0.0f;
         nameShip.text = infoSpaceShip[index].spaceshipName;
-       /* for (int i = 0; i < spaceShips.Length; i++)
-        {
-            
+        GameDataPersistent.instance.selectSpaceShip = infoSpaceShip[index];
 
-            if (i == index)
-            {
-                spaceShips[i].SetActive(true);
-            }
+        /* for (int i = 0; i < spaceShips.Length; i++)
+         {
 
-            else
-            {
-                spaceShips[i].SetActive(false);
-            }
-        }*/
+
+             if (i == index)
+             {
+                 spaceShips[i].SetActive(true);
+             }
+
+             else
+             {
+                 spaceShips[i].SetActive(false);
+             }
+         }*/
     }
 
     public void PreviusShip()
@@ -132,7 +134,7 @@ public class SpaceShipScreen : MonoBehaviour
 
 
         nameShip.text = infoSpaceShip[index].spaceshipName;
-
+        GameDataPersistent.instance.selectSpaceShip = infoSpaceShip[index];
  
     }
 
