@@ -19,13 +19,13 @@ public class PlayerMove : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         Vector3 position = transform.position;
 
-        if(horizontal < 0 && transform.position.x > -90)
+        if(horizontal < 0 && transform.position.x > -250)
         {
             position.x = position.x + speed * horizontal;
             transform.position = position;
         }
 
-        if (horizontal > 0 && transform.position.x < -90)
+        if (horizontal > 0 && transform.position.x < 250)
         {
             position.x = position.x + speed * horizontal;
             transform.position = position;
