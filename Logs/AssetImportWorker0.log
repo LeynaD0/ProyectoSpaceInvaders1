@@ -622,3 +622,4 @@ Received Import Request.
 Start importing Assets/Scripts/EnemyController.cs using Guid(2ab63b93d132a9b419f2a06945b4a41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203116d7cbb8428a961e058ae17d29e0') in 0.009159 seconds 
   Import took 0.015959 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
