@@ -3349,6 +3349,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659059220}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &662436955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6567104220642955230, guid: 9fb1e93e11c460b4fa0fd9219110da6e, type: 3}
+  m_PrefabInstance: {fileID: 524313890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &684316973
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,6 +4429,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1050084472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fb1e93e11c460b4fa0fd9219110da6e, type: 3}
+  m_PrefabInstance: {fileID: 524313890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1050084473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050084472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab63b93d132a9b419f2a06945b4a41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesList:
+  - enemies:
+    - {fileID: 1741956946}
+    - {fileID: 1822719819}
+    - {fileID: 1238365002}
+    - {fileID: 457339141}
+    - {fileID: 49406536}
+    - {fileID: 866355114}
+    - {fileID: 626133375}
+    - {fileID: 512188050}
+    - {fileID: 2069438300}
+    - {fileID: 223043749}
+    - {fileID: 18809290}
+  - enemies:
+    - {fileID: 793352344}
+    - {fileID: 1650610036}
+    - {fileID: 532098016}
+    - {fileID: 23807004}
+    - {fileID: 354209039}
+    - {fileID: 1348031977}
+    - {fileID: 1613382591}
+    - {fileID: 831128229}
+    - {fileID: 544793982}
+    - {fileID: 1247925109}
+    - {fileID: 425413442}
+  - enemies:
+    - {fileID: 662436955}
+    - {fileID: 117501781}
+    - {fileID: 1352232162}
+    - {fileID: 632663264}
+    - {fileID: 438042944}
+    - {fileID: 879160299}
+    - {fileID: 2040496258}
+    - {fileID: 1400619036}
+    - {fileID: 2140531039}
+    - {fileID: 1263367173}
+    - {fileID: 463874457}
+  - enemies:
+    - {fileID: 1709079313}
+    - {fileID: 183258771}
+    - {fileID: 684316973}
+    - {fileID: 1277389357}
+    - {fileID: 11175215}
+    - {fileID: 895579527}
+    - {fileID: 2070166830}
+    - {fileID: 945615917}
+    - {fileID: 2054796741}
+    - {fileID: 2072069857}
+    - {fileID: 1405918372}
+  - enemies:
+    - {fileID: 1909808529}
+    - {fileID: 2016222873}
+    - {fileID: 512183223}
+    - {fileID: 527704605}
+    - {fileID: 1425422629}
+    - {fileID: 1147787216}
+    - {fileID: 1522580109}
+    - {fileID: 1336614139}
+    - {fileID: 1994425285}
+    - {fileID: 163374991}
+    - {fileID: 480842917}
 --- !u!1 &1093122804
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,6 +6469,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709079313}
   m_Mesh: {fileID: -423436566138321702, guid: 9fb1e93e11c460b4fa0fd9219110da6e, type: 3}
+--- !u!1 &1741956946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4551443809431427398, guid: 9fb1e93e11c460b4fa0fd9219110da6e, type: 3}
+  m_PrefabInstance: {fileID: 524313890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765213663
 GameObject:
   m_ObjectHideFlags: 0
@@ -6655,6 +6743,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1909808529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7521691305379612946, guid: 9fb1e93e11c460b4fa0fd9219110da6e, type: 3}
+  m_PrefabInstance: {fileID: 524313890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1994425285
 GameObject:
   m_ObjectHideFlags: 0
