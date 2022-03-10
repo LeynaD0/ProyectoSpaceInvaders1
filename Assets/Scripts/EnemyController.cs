@@ -12,9 +12,12 @@ public class EnemyController : MonoBehaviour
     }
     public EnemiesList[] enemiesList;
 
+    public float missileAttackRate = 1.0f;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        
         PrintArray();
     }
 
@@ -60,6 +63,19 @@ public class EnemyController : MonoBehaviour
             }
             enemiesList[lastx].enemies[lasty].SetActive(false);
 
+        }
+    }
+
+    private void EnemyAttack()
+    {
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
+        {
+            other.gameObject.SetActive(false);
         }
     }
 }

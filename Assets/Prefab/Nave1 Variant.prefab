@@ -58,7 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   data: {fileID: 0}
-  projectilePrefab: {fileID: 664649010464802744, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}
+  projectilePrefab: {fileID: 5568421654582021392, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}
 --- !u!1001 &2774962777789683825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125,6 +125,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e6803cdcb48a8a443b8a89270ec7eec0, type: 3}
       propertyPath: m_Name
       value: Nave1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6803cdcb48a8a443b8a89270ec7eec0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6803cdcb48a8a443b8a89270ec7eec0, type: 3}
       propertyPath: m_IsActive

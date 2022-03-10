@@ -6,7 +6,9 @@ public class PlayerMove : MonoBehaviour
 {
     public float speed;
     public SpaceShipData data;
-    public GameObject projectilePrefab;
+    public Projectile projectilePrefab;
+
+    private bool projectileActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,15 +36,22 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Projectile();
+            Shoot();
         }
     }
 
-    public void Projectile()
+    public void Shoot()
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        if (!projectileActive)
+        {
+            Projectile projectile = Instantiate(this.projectilePrefab, this.transform.position, Quaternion.identity);
+            projectile.destroyed += ShootDestroyed;
+            projectileActive = true;
+        }
+    }
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(Vector3.up, 300f);
+    private void ShootDestroyed()
+    {
+        projectileActive = false;
     }
 }
