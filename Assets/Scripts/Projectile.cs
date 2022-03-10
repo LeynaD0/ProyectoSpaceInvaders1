@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Launch(Vector2 direction, float force)
+    public void Launch(Vector3 direction, float force)
     {
         rigidbody.AddForce(direction * force);
     }
@@ -26,6 +26,11 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        EnemyController e = collision.collider.GetComponent<EnemyController>();
+
+        if(e != null)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

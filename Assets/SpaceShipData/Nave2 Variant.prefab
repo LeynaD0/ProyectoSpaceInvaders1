@@ -32,18 +32,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2027647297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7457006212992030455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7ab5faa12ec6b746a509428401d33a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-161778233363000636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   data: {fileID: 0}
+  projectilePrefab: {fileID: 664649010464802744, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}
+--- !u!114 &2027647297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457006212992030455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ab5faa12ec6b746a509428401d33a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7763627919821794214
 PrefabInstance:
   m_ObjectHideFlags: 0

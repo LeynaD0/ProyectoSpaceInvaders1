@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public float speed;
     public SpaceShipData data;
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +31,18 @@ public class PlayerMove : MonoBehaviour
             position.x = position.x + speed * horizontal;
             transform.position = position;
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Projectile();
+        }
     }
 
     public void Projectile()
     {
+        GameObject projectileObject = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(Vector3.up, 300f);
     }
 }
