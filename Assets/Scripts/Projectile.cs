@@ -20,6 +20,12 @@ public class Projectile : MonoBehaviour
     {
         this.destroyed.Invoke();
         Destroy(this.gameObject); 
+
+        if (other.tag == "Separroqui")
+        {
+            other.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
     }
 
     

@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Collections;
 
+/// <summary>
+/// Se encarga de mover los enemigos y seleccionar el que va  a disparar (lógica)
+/// </summary>
 public class EnemyController : MonoBehaviour
 {
     [Serializable]
@@ -68,7 +72,7 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyAttack()
     {
-
+        
     }
 
     private void OnTriggerEnter(Collider other)
