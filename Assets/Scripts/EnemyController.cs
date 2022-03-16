@@ -18,10 +18,14 @@ public class EnemyController : MonoBehaviour
 
     public float missileAttackRate = 1.0f;
 
+    bool choquePared = false;
+
+    private Vector3 enemy = new Vector3();
+
     // Start is called before the first frame update
     private void Start()
     {
-        
+        enemy = new Vector3(1f, 0f, 0f);
         PrintArray();
     }
 
@@ -68,6 +72,13 @@ public class EnemyController : MonoBehaviour
             enemiesList[lastx].enemies[lasty].SetActive(false);
 
         }
+
+        if(choquePared == true)
+        {
+            enemy.x = enemy.x * -1f;
+            choquePared = false;
+        }
+        transform.Translate(enemy * Time.deltaTime * 10, Space.World);
     }
 
     private void EnemyAttack()
@@ -80,6 +91,14 @@ public class EnemyController : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
         {
             other.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Pared")
+        {
+            choquePared = true;
         }
     }
 }
