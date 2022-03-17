@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.Collections;
+
 
 /// <summary>
 /// Se encarga de mover los enemigos y seleccionar el que va  a disparar (lógica)
@@ -16,16 +16,46 @@ public class EnemyController : MonoBehaviour
     }
     public EnemiesList[] enemiesList;
 
-    public float missileAttackRate = 1.0f;
+    public int columNumber;
 
-    bool choquePared = false;
+    public int[] rowNumber;
 
-    private Vector3 enemy = new Vector3();
+    public int columsActivated;
+    public GameObject projectilePrefab;
+    public float shootTimer = 1;
+    public GameObject enemigos;
+
+    public bool spaceToTheR = true;
+    public bool spaceToTheL;
+    public float movingTimer;
+    public float movingTime = 2;
+
+    public static EnemyController instance;
+
+    private void Awake()
+    {
+        movingTimer = movingTime;
+        if (EnemyController.instance == null)
+        {
+            EnemyController.instance = this;
+        }
+
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        columNumber = enemiesList.Length;
+
+        for (int x = 0; x < enemiesList.Length; x++)
+        {
+            rowNumber.SetValue(enemiesList[x].enemies.Length, x);
+        }
+    }
+
 
     // Start is called before the first frame update
     private void Start()
     {
-        enemy = new Vector3(1f, 0f, 0f);
         PrintArray();
     }
 
@@ -47,7 +77,51 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        shootTimer -= Time.deltaTime;
+        if (shootTimer <= 0)
+        {
+            shootTimer = 1;
+            bool seHaDisparado = false;
+
+            while (!seHaDisparado)
+            {
+                columsActivated = 0;
+                for (int r = 0; r < rowNumber.Length; r++)
+                {
+                    columsActivated += rowNumber[r];
+                }
+                if (columsActivated > 0)
+                {
+                    seHaDisparado = AlienShoot();
+                }
+                else
+                {
+                    seHaDisparado = true;
+                }
+            }
+        }
+
+        movingTimer -= Time.deltaTime;
+
+        if (spaceToTheR == true)
+        {
+            if (movingTimer <= 0)
+            {
+                enemigos.transform.Translate(Vector3.right * 2);
+                movingTimer = movingTime;
+            }
+        }
+
+        if (spaceToTheL == true)
+        {
+            if (movingTimer <= 0)
+            {
+                enemigos.transform.Translate(Vector3.left * 2);
+                movingTimer = movingTime;
+            }
+        }
+        
+        /*if (Input.GetKeyUp(KeyCode.Space))
         {
             int lastx = 0;
             int lasty = 0;
@@ -73,19 +147,70 @@ public class EnemyController : MonoBehaviour
 
         }
 
-        if(choquePared == true)
-        {
-            enemy.x = enemy.x * -1f;
-            choquePared = false;
-        }
-        transform.Translate(enemy * Time.deltaTime * 10, Space.World);
-    }
+        this.transform.position += direction * this.speed * Time.deltaTime;
 
-    private void EnemyAttack()
-    {
+        Vector3 leftEdge = Camera.main.ViewportToScreenPoint(Vector3.zero);
+        Vector3 rightEdge = Camera.main.ViewportToScreenPoint(Vector3.right);
         
+        foreach (Transform enemy in this.transform)
+        {
+            if (!enemy.gameObject.activeInHierarchy)
+            {
+                continue;
+            }
+
+            if (direction == Vector3.right && enemy.position.x > rightEdge.x - 1.0f)
+            {
+                AdvanceRow();
+            }
+
+            else if (direction == Vector3.left && enemy.position.x < (leftEdge.x + 1.0f))
+            {
+                AdvanceRow();
+            }
+        }*/
     }
 
+    public bool AlienShoot()
+    {
+        int colum = UnityEngine.Random.Range(0, enemiesList.Length);
+        int lastActiveAlien = 0;
+        bool hayAliens = true;
+        if (rowNumber[colum] > 0)
+        {
+            for (int y = 0; y < enemiesList[colum].enemies.Length; y++)
+            {
+                if (enemiesList[colum].enemies[y].activeSelf == false && y == 0)
+                {
+                    hayAliens = false;
+                    rowNumber.SetValue(0, colum);
+                    break;
+                }
+
+                else if (enemiesList[colum].enemies[y].activeSelf == true)
+                {
+                    lastActiveAlien = y;
+                    rowNumber.SetValue(lastActiveAlien + 1, colum);
+                }
+            }
+
+            if (hayAliens)
+            {
+                GameObject shooter = enemiesList[colum].enemies[lastActiveAlien];
+                GameObject projectileObject = Instantiate(projectilePrefab, shooter.transform.position + Vector3.down, Quaternion.Euler(90, 0, 0));
+                Projectile projectile = projectileObject.GetComponent<Projectile>();
+                projectile.SetObjective("Player");
+                projectile.alienShooting = true;
+                projectile.transform.localScale *= 0.5f;
+                projectile.Launch(Vector3.down, 3000);
+            }
+        }
+        if (rowNumber[colum] == 0)
+        {
+            hayAliens = false;
+        }
+        return hayAliens;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
@@ -94,12 +219,5 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Pared")
-        {
-            choquePared = true;
-        }
-    }
 }
 

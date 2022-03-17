@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Projectile Missile
       objectReference: {fileID: 0}
+    - target: {fileID: 664649010464802744, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4423267734584486897, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -59,5 +63,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5bd73f816ed6faa4bbbcd767cfa3c417, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5568421654582021392, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78218a0410d7f1642b2925a7ed07644c, type: 3}

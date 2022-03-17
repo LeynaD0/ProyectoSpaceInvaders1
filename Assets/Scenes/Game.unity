@@ -2357,7 +2357,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &523038606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2695,7 +2704,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &544297117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3167,7 +3185,16 @@ MonoBehaviour:
     - {fileID: 1049872870}
     - {fileID: 886914035}
     - {fileID: 304099918}
-  missileAttackRate: 1
+  columNumber: 11
+  rowNumber: 0000000000000000000000000000000000000000
+  columsActivated: 0
+  projectilePrefab: {fileID: 7222759135266425136, guid: c095f5a84adb5644eb923e4941a7149f, type: 3}
+  shootTimer: 1
+  enemigos: {fileID: 672423141}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!4 &672423143
 Transform:
   m_ObjectHideFlags: 0
@@ -4003,7 +4030,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &886914034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4324,7 +4360,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1 &960980309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,7 +4577,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974598528}
   m_LocalRotation: {x: -0, y: -0, z: 0.0032643846, w: 0.9999947}
-  m_LocalPosition: {x: 0, y: 0, z: 6593}
+  m_LocalPosition: {x: 0, y: 0, z: 4702}
   m_LocalScale: {x: 0.507171, y: 0.3260585, z: 0.29980454}
   m_Children: []
   m_Father: {fileID: 1104610103}
@@ -4681,7 +4726,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &975935392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5484,7 +5538,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093122804}
   m_LocalRotation: {x: -0, y: -0, z: 0.0032643846, w: 0.9999947}
-  m_LocalPosition: {x: 0, y: 0, z: 6593}
+  m_LocalPosition: {x: 0, y: 0, z: 4702}
   m_LocalScale: {x: 0.507171, y: 0.3260585, z: 0.29980454}
   m_Children: []
   m_Father: {fileID: 1104610103}
@@ -7243,7 +7297,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &1390643469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7344,7 +7407,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1 &1425754314
 GameObject:
   m_ObjectHideFlags: 0
@@ -7691,7 +7763,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &1565410237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7870,7 +7951,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &1584327617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9529,7 +9619,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
-  missileAttackRate: 1
+  columNumber: 0
+  rowNumber: 
+  columsActivated: 0
+  projectilePrefab: {fileID: 0}
+  shootTimer: 1
+  enemigos: {fileID: 0}
+  spaceToTheR: 1
+  spaceToTheL: 0
+  movingTimer: 0
+  movingTime: 2
 --- !u!1001 &1962474354
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,8 @@ public class Projectile : MonoBehaviour
     public float speed;
 
     public System.Action destroyed;
-    
+    public bool alienShooting;
+
     private void Update()
     {
         this.transform.position += this.direction * this.speed * Time.deltaTime;
@@ -28,5 +30,13 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    
+    internal void SetObjective(string v)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void Launch(Vector3 down, int v)
+    {
+        throw new NotImplementedException();
+    }
 }
