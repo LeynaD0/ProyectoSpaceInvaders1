@@ -26,6 +26,8 @@ public class GameController : MonoBehaviour
     bool touchEnded = false;
 
     public GameObject spaceShipScreen;
+
+    
     
     void Start()
     {

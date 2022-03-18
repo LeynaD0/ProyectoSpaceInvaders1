@@ -44,4 +44,10 @@ public class Score : MonoBehaviour
 
     }
 
+    public void AddPointsMotherShip()
+    {
+        point += 200;
+        pointsText.text = point.ToString() + " Points";
+
+    }
 }

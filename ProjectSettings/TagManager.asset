@@ -9,6 +9,7 @@ TagManager:
   - Separroqui2
   - Separroqui3
   - Bunker
+  - MotherShip
   layers:
   - Default
   - TransparentFX

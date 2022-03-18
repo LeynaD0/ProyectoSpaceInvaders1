@@ -7,22 +7,24 @@ public class EnemyMove : MonoBehaviour
 {
     public GameObject missilePrefab;
     public GameObject motherShipPrefab;
+    public GameObject loseCanv;
+    public GameObject hud;
 
-    private Vector3 hMoveDistance = new Vector3(2.0f, 0, 0);
-    private Vector3 vMoveDistance = new Vector3(0, 5f, 0);
+    private Vector3 hMoveDistance = new Vector3(5f, 0, 0);
+    private Vector3 vMoveDistance = new Vector3(0, 2f, 0);
     private Vector3 motherShipSpawnPos = new Vector3(420.4f, 193.1f, 26.3f);
 
-    private const float MAX_LEFT = 400f;
-    private const float MAX_RIGHT = -400f;
-    private const float MAX_MOVE_SPEED = 0.02f;
+    private const float MAX_LEFT = -200f;
+    private const float MAX_RIGHT = 228;
+    private const float MAX_MOVE_SPEED = 0.5f;
 
     private float moveTimer = 0.01f;
     private const float moveTime = 0.005f;
 
-    private float shootTimer = 3f;
-    private const float shootTime = 3f;
+    private float shootTimer = 0.0f;
+    private const float shootTime = 1.0f;
 
-    private float motherShipTimer = 1f;
+    private float motherShipTimer = 60f;
     private const float MOTHERSHIP_MIN = 15f;
     private const float MOTHERSHIP_MAX = 60f;
 
@@ -53,7 +55,7 @@ public class EnemyMove : MonoBehaviour
         {
             MoveEnemies();
         }
-        if (shootTime <= 0)
+        if (shootTimer <= 0)
         {
             Shoot();
         }
@@ -85,7 +87,10 @@ public class EnemyMove : MonoBehaviour
                 }
 
                 if (allInvader[i].transform.position.x > MAX_RIGHT || allInvader[i].transform.position.x < MAX_LEFT)
-                hitMax++;
+                {
+                    hitMax++;
+                }
+                
                 
             }
             if(hitMax > 0)
@@ -93,19 +98,19 @@ public class EnemyMove : MonoBehaviour
                 for (int i = 0; i < allInvader.Count; i++)
                 {
                     allInvader[i].transform.position -= vMoveDistance;
-
                 }
 
                 movingRight = !movingRight;
             }
-
+            
             moveTimer = GetMoveSpeed();
         }
     }
 
     public void Shoot()
     {
-        Vector2 pos = allInvader[Random.Range(0, allInvader.Count)].transform.position;
+        Debug.Log("Enemigo dispara");
+        Vector3 pos = allInvader[Random.Range(0, allInvader.Count)].transform.position;
 
         Instantiate(missilePrefab, pos, Quaternion.identity);
 
@@ -132,9 +137,11 @@ public class EnemyMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bunker");
+        if (other.tag == "Bunker")
         {
             other.gameObject.SetActive(false);
         }
+
+        
     }
 }

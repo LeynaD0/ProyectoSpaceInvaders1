@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     public SpaceShipData data;
     public Projectile projectilePrefab;
+    
+    
 
     private bool projectileActive;
     // Start is called before the first frame update
@@ -22,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         Vector3 position = transform.position;
 
-        if(horizontal < 0 && transform.position.x > -250)
+        if(horizontal < 0 && transform.position.x > -226)
         {
             position.x = position.x + speed * horizontal;
             transform.position = position;
@@ -54,4 +56,6 @@ public class PlayerMove : MonoBehaviour
     {
         projectileActive = false;
     }
+
+    
 }

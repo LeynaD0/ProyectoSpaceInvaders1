@@ -6,7 +6,7 @@ public class Bunker : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Separroqui"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Missile"))
         {
             gameObject.SetActive(false);
         }

@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     public float speed;
 
     public System.Action destroyed;
-    internal bool alienShooting;
+    
 
     private void Update()
     {
@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         this.destroyed.Invoke();
-        Destroy(this.gameObject); 
+        Destroy(this.gameObject);
 
         if (other.tag == "Separroqui")
         {
@@ -44,6 +44,13 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Bunker"))
         {
             other.gameObject.SetActive(false);
+        }
+
+        if (other.tag == "MotherShip")
+        {
+            other.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            Score.instance.AddPointsMotherShip();
         }
     }
 
