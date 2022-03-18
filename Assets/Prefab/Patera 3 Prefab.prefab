@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1103819957179206088}
   m_Layer: 8
   m_Name: Patera 3 Prefab
-  m_TagString: Separroqui
+  m_TagString: Separroqui3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

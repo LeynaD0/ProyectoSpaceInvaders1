@@ -8,6 +8,6 @@ public class PlayerLoader : MonoBehaviour
     {
         GameObject nave = Instantiate(GameDataPersistent.instance.selectSpaceShip.prefab);
         nave.transform.localScale *= 0.02f;
-        nave.transform.position = new Vector3(0, -150, 285);
+        nave.transform.position = new Vector3(0, -197, 19);
     }
 }

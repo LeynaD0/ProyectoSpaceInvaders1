@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     public float speed;
 
     public System.Action destroyed;
-    public bool alienShooting;
+    internal bool alienShooting;
 
     private void Update()
     {
@@ -27,6 +27,23 @@ public class Projectile : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             Destroy(this.gameObject);
+            Score.instance.AddPointsEnemy1();
+        }
+        if (other.tag == "Separroqui2")
+        {
+            other.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            Score.instance.AddPointsEnemy2();
+        }
+        if (other.tag == "Separroqui3")
+        {
+            other.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            Score.instance.AddPointsEnemy3();
+        }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bunker"))
+        {
+            other.gameObject.SetActive(false);
         }
     }
 
