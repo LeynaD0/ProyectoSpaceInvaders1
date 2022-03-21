@@ -10,5 +10,10 @@ public class Bunker : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Separroqui"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

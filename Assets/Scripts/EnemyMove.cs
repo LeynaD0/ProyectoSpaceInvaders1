@@ -7,8 +7,7 @@ public class EnemyMove : MonoBehaviour
 {
     public GameObject missilePrefab;
     public GameObject motherShipPrefab;
-    public GameObject loseCanv;
-    public GameObject hud;
+
 
     private Vector3 hMoveDistance = new Vector3(5f, 0, 0);
     private Vector3 vMoveDistance = new Vector3(0, 2f, 0);
@@ -135,13 +134,11 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Bunker")
+        if(collision.gameObject.tag == "Bunker")
         {
-            other.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
-
-        
     }
 }

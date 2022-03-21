@@ -10,8 +10,6 @@ public class Missile : MonoBehaviour
     public float speed;
 
     public System.Action destroyed;
-
-    
     
 
     // Update is called once per frame
@@ -45,6 +43,8 @@ public class Missile : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             Destroy(this.gameObject);
+            WinOrLose.instance.YourLose();
+            
             
         }
 
@@ -52,5 +52,7 @@ public class Missile : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+
     }
 }
