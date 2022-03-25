@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 public class Missile : MonoBehaviour
-{
+{ 
     public Vector3 direction;
 
     public float speed;
@@ -29,7 +29,7 @@ public class Missile : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         
 
@@ -44,8 +44,6 @@ public class Missile : MonoBehaviour
             other.gameObject.SetActive(false);
             Destroy(this.gameObject);
             WinOrLose.instance.YourLose();
-            
-            
         }
 
         if (other.tag == "Pared")

@@ -63,6 +63,11 @@ public class EnemyMove : MonoBehaviour
             SpawnMotherShip();
         }
 
+        if (allInvader.Count == 0)
+        {
+            WinOrLose.instance.YourWin();
+        }
+
         moveTimer -= Time.deltaTime;
         shootTimer -= Time.deltaTime;
         motherShipTimer -= Time.deltaTime;

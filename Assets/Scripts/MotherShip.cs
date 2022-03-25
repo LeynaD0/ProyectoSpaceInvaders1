@@ -18,7 +18,16 @@ public class MotherShip : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Projectile")
+        {
+            other.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
+    }
+
+
 
 
 
