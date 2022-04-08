@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8565854290180637677}
   - component: {fileID: 8565854290180637678}
   - component: {fileID: 8565854290180637676}
+  - component: {fileID: 4986014543896745095}
   m_Layer: 8
   m_Name: Patera 1 Prefab
-  m_TagString: Separroqui
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,8 +91,22 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8565854290180637672}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.03338851, y: 0.046908036, z: 0.04}
   m_Center: {x: 0.000000029802322, y: 0.009352256, z: 0.00051455584}
+--- !u!114 &4986014543896745095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8565854290180637672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a05f572bf16a944b908a04c168d848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 50
+  explosion: {fileID: 7415929870132228685, guid: 6331245400d344e468536ee35d6640eb, type: 3}

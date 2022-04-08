@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1498554173122899343}
   - component: {fileID: 1498554173122899342}
   - component: {fileID: 1498554173122899341}
-  - component: {fileID: 4798032362583599311}
+  - component: {fileID: 3468650645068639741}
   m_Layer: 11
   m_Name: Bunker
   m_TagString: Bunker
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 14.318054}
   m_Center: {x: 0, y: 0, z: 6.616418}
---- !u!114 &4798032362583599311
+--- !u!114 &3468650645068639741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,6 +105,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498554173122899340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2afc836d088d914ba2f3e7696a69df3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b21f12e7af00c040945f75a7873fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
