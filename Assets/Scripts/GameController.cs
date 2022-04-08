@@ -41,7 +41,8 @@ public class GameController : MonoBehaviour
         if (introductionScreen.activeSelf == true)
         {
             IntroductionControllerScreen();
-        }else if (waitingScreen.activeSelf == true)
+        }
+        else if (waitingScreen.activeSelf == true)
         {
             WaitinScreenController();
         }

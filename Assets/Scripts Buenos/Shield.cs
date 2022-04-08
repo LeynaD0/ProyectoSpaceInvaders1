@@ -32,6 +32,11 @@ public class Shield : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("StrongBullet"))
+        {
+            Destroy(gameObject);
+        }
+
 
     }
 }

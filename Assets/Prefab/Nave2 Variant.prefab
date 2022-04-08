@@ -80,6 +80,8 @@ MonoBehaviour:
     shipSpeed: 0
     fireRate: 0
   bulletPrefab: {fileID: 3425974799506050573, guid: 07fcd1df2fdb5a14690b430cb0bc2e6d, type: 3}
+  strongBulletPrefab: {fileID: 1379270785594666861, guid: 63481c26164d71e43b7e3e1c8c964c93, type: 3}
+  mediumBulletPrefab: {fileID: 7546814221819387340, guid: beac0925d463e034f9147ce2330c180d, type: 3}
 --- !u!1001 &7763627919821794214
 PrefabInstance:
   m_ObjectHideFlags: 0

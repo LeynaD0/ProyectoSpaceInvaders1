@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
     public ShipStats shiptStats;
     public GameObject bulletPrefab;
+    public GameObject strongBulletPrefab;
+    public GameObject mediumBulletPrefab;
 
     private Vector2 offScreenPos = new Vector2(0, -300f);
     private Vector2 startPos = new Vector2(0, -190f);
 
-    private const float MAX_LEFT = -220f;
-    private const float MAX_RIGHT = 220f;
+    private const float MAX_LEFT = -180f;
+    private const float MAX_RIGHT = 180f;
 
     private const float speed = 150;
     private float cooldown = 0.5f;
 
     private bool isShooting;
+    
     void Start()
     {
         shiptStats.currentHealth = shiptStats.maxHealth;
@@ -41,6 +45,16 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && !isShooting)
         {
             StartCoroutine(Shoot());
+        }
+
+        if (Input.GetKey(KeyCode.E) && !isShooting)
+        {
+            StartCoroutine(StrongBullet());
+        }
+        
+        if (Input.GetKey(KeyCode.Q) && !isShooting)
+        {
+            StartCoroutine(MediumBullet());
         }
     }
 
@@ -67,6 +81,22 @@ public class Player : MonoBehaviour
     {
         isShooting = true;
         Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(cooldown);
+        isShooting = false;
+    }
+
+    private IEnumerator StrongBullet()
+    {
+        isShooting = true;
+        Instantiate(strongBulletPrefab, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(cooldown);
+        isShooting = false;
+    }
+
+    private IEnumerator MediumBullet()
+    {
+        isShooting = true;
+        Instantiate(mediumBulletPrefab, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(cooldown);
         isShooting = false;
     }

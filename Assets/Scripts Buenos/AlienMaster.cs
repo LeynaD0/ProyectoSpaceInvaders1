@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class AlienMaster : MonoBehaviour
 {
+    public static AlienMaster instance;
     public GameObject bulletPrefab;
     public GameObject mothershipPrefab;
 
@@ -25,6 +26,8 @@ public class AlienMaster : MonoBehaviour
     private float mothershipTimer = 60f;
     private const float MOTHERSHIP_MIN = 15f;
     private const float MOTHERSHIP_MAX = 60f;
+
+    private bool dontDestroyLast;
 
     private bool movingRight;
 
@@ -58,6 +61,8 @@ public class AlienMaster : MonoBehaviour
         moveTimer -= Time.deltaTime;
         shootTimer -= Time.deltaTime;
         mothershipTimer -= Time.deltaTime;
+
+        
     }
 
     private void MoveEnemies()
@@ -96,6 +101,20 @@ public class AlienMaster : MonoBehaviour
         }
     }
 
+    /*public void BulletMedium()
+    {
+        for (int i = 44; i < allAliens.Count; i++)
+        {
+            if (i >= MediumBullet.instance.countEnemies)
+            {
+                Destroy(Player.instance.mediumBulletPrefab);
+                
+                i = 44;
+            }
+
+         Debug.Log("Enemigos Alcanzados" + MediumBullet.instance.countEnemies);
+        }
+    }*/
     private void Shoot()
     {
         Vector2 pos = allAliens[Random.Range(0, allAliens.Count)].transform.position;

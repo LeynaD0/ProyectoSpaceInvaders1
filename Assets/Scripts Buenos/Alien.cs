@@ -8,6 +8,8 @@ public class Alien : MonoBehaviour
 
     public GameObject explosion;
 
+    private float timeExplosion = 1f;
+
 
     public void Kill()
     {
@@ -21,6 +23,6 @@ public class Alien : MonoBehaviour
     {
         UI.instance.point += scoreValue;
         UI.instance.pointsText.text = "Points " + UI.instance.point.ToString();
-        Debug.Log("Dando Puntos");
+        Debug.Log("Dando Puntos " + UI.instance.point);
     }
 }

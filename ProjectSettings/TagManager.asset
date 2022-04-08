@@ -13,6 +13,7 @@ TagManager:
   - Alien
   - EnemyBullet
   - FriendlyBullet
+  - StrongBullet
   layers:
   - Default
   - TransparentFX
